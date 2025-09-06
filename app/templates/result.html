@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Resultados · Gemini Chunking{% endblock %}
+{% block content %}
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h1 class="h4 m-0">Resultados para {{ filename }}</h1>
+    <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('main.index') }}">Nueva carga</a>
+  </div>
+
+  <div class="mb-3">
+    <span class="badge bg-primary">Estrategia: {{ strategy }}</span>
+    <span class="badge bg-secondary">Chunks: {{ num_chunks }}</span>
+  </div>
+
+  <div class="accordion" id="chunksAccordion">
+    {% for chunk, output in results %}
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading{{ loop.index }}">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
+            Chunk {{ loop.index }}
+          </button>
+        </h2>
+        <div id="collapse{{ loop.index }}" class="accordion-collapse collapse" aria-labelledby="heading{{ loop.index }}" data-bs-parent="#chunksAccordion">
+          <div class="accordion-body">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h2 class="h6">Texto</h2>
+                <pre class="small bg-light p-3 rounded border overflow-auto" style="max-height: 320px; white-space: pre-wrap;">{{ chunk }}</pre>
+              </div>
+              <div class="col-md-6">
+                <h2 class="h6">Gemini</h2>
+                <div class="small p-3 rounded border" style="background:#f9fafb; white-space: pre-wrap;">{{ output }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+

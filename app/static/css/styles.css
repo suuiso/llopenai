@@ -1,0 +1,4 @@
+body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+.card { border-radius: 10px; }
+pre { overflow-x: auto; }
+.d-none { display: none !important; }
