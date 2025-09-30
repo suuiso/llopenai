@@ -1,0 +1,230 @@
+{
+    "status": "precision_validated",
+    "module": "harmonic_precision_analyzer",
+    "analysis_timestamp": "2025-09-30T02:40:45.390373Z",
+    "processing_time": 0.085016,
+    "precision_score": 0.9320209973753282,
+    "validation_passed": true,
+    "individual_parts": {
+        "guitar_1": {
+            "harmonic_analysis": {
+                "power_chords": {
+                    "count": 0,
+                    "percentage": 0.0,
+                    "progression": []
+                },
+                "extended_techniques": {
+                    "technique_count": 0,
+                    "techniques_detected": []
+                },
+                "voicing_analysis": {
+                    "voicing_distribution": {},
+                    "complexity_score": 0.0
+                },
+                "harmonic_density": 0.0,
+                "chord_types": {},
+                "harmonic_rhythm": {
+                    "rhythm": "static",
+                    "changes_per_measure": 0
+                }
+            },
+            "confidence": 0.35333333333333333,
+            "validation_status": "requires_review"
+        },
+        "bass": {
+            "harmonic_analysis": {
+                "fundamentals": [
+                    {
+                        "pitch": "E",
+                        "midi": 40,
+                        "time": 0.0
+                    }
+                ],
+                "fundamental_progression": [
+                    "E"
+                ],
+                "bass_movement": {
+                    "movement_type": "static",
+                    "average_interval": 0
+                },
+                "harmonic_support": "harmonic_foundation",
+                "root_motion": {
+                    "motion_type": "varied",
+                    "strength": 0.7
+                }
+            },
+            "confidence": 0.34,
+            "validation_status": "requires_review"
+        }
+    },
+    "global_harmonic_structure": {
+        "global_chord_progression": [],
+        "harmonic_density": 0.0,
+        "harmonic_complexity": 0.0,
+        "total_chords": 0,
+        "total_notes": 4,
+        "harmonic_timeline": []
+    },
+    "modal_analysis": {
+        "predicted_centers": [
+            {
+                "center": "E",
+                "mode": "minor",
+                "confidence": 0.6365363751022299,
+                "bass_correlation": 1.0
+            }
+        ],
+        "confidence": 0.6365363751022299,
+        "bass_validated": true,
+        "validation_confidence": 1.0,
+        "validated_center": {
+            "center": "E",
+            "mode": "minor",
+            "confidence": 0.6365363751022299,
+            "bass_correlation": 1.0
+        }
+    },
+    "functional_analysis": {
+        "functional_progression": [
+            {
+                "offset": 0.0,
+                "chord": "Perfect Double-octave above E",
+                "roman_numeral": "i"
+            },
+            {
+                "offset": 1.0,
+                "chord": "Minor Seventeenth above E",
+                "roman_numeral": "i"
+            },
+            {
+                "offset": 2.0,
+                "chord": "Perfect Nineteenth above E",
+                "roman_numeral": "i5"
+            }
+        ],
+        "cadences_detected": [],
+        "harmonic_functions": {
+            "i": 2,
+            "i5": 1
+        },
+        "precision_score": 1.0
+    },
+    "temporal_segments": [
+        {
+            "start_sec": 0.0,
+            "end_sec": 2.0,
+            "start_measure": 1,
+            "end_measure": 2,
+            "key_center": "E",
+            "mode": "minor",
+            "confidence": 0.6365363751022299,
+            "precision_score": 0.85,
+            "chord_progression": [],
+            "harmonic_tension": 0.0,
+            "modal_interchanges": [],
+            "functional_analysis": [],
+            "bass_validation": {
+                "validated": true,
+                "score": 0.9
+            },
+            "cross_validation": {
+                "precision": 0.85,
+                "bass_validation": {
+                    "validated": true,
+                    "score": 0.9
+                },
+                "timing_precision": 0.95
+            },
+            "individual_parts": {}
+        },
+        {
+            "start_sec": 0.5,
+            "end_sec": 2.0,
+            "start_measure": 1,
+            "end_measure": 2,
+            "key_center": "E",
+            "mode": "minor",
+            "confidence": 0.6365363751022299,
+            "precision_score": 0.85,
+            "chord_progression": [],
+            "harmonic_tension": 0.0,
+            "modal_interchanges": [],
+            "functional_analysis": [],
+            "bass_validation": {
+                "validated": true,
+                "score": 0.9
+            },
+            "cross_validation": {
+                "precision": 0.85,
+                "bass_validation": {
+                    "validated": true,
+                    "score": 0.9
+                },
+                "timing_precision": 0.95
+            },
+            "individual_parts": {}
+        },
+        {
+            "start_sec": 1.0,
+            "end_sec": 2.0,
+            "start_measure": 1,
+            "end_measure": 2,
+            "key_center": "E",
+            "mode": "minor",
+            "confidence": 0.6365363751022299,
+            "precision_score": 0.85,
+            "chord_progression": [],
+            "harmonic_tension": 0.0,
+            "modal_interchanges": [],
+            "functional_analysis": [],
+            "bass_validation": {
+                "validated": true,
+                "score": 0.9
+            },
+            "cross_validation": {
+                "precision": 0.85,
+                "bass_validation": {
+                    "validated": true,
+                    "score": 0.9
+                },
+                "timing_precision": 0.95
+            },
+            "individual_parts": {}
+        },
+        {
+            "start_sec": 1.5,
+            "end_sec": 2.0,
+            "start_measure": 1,
+            "end_measure": 2,
+            "key_center": "E",
+            "mode": "minor",
+            "confidence": 0.6365363751022299,
+            "precision_score": 0.85,
+            "chord_progression": [],
+            "harmonic_tension": 0.0,
+            "modal_interchanges": [],
+            "functional_analysis": [],
+            "bass_validation": {
+                "validated": true,
+                "score": 0.9
+            },
+            "cross_validation": {
+                "precision": 0.85,
+                "bass_validation": {
+                    "validated": true,
+                    "score": 0.9
+                },
+                "timing_precision": 0.95
+            },
+            "individual_parts": {}
+        }
+    ],
+    "cross_validation": {
+        "harmonic_match": 0.0,
+        "timing_accuracy": 1.0,
+        "bass_fundamental_match": 0.0,
+        "overall_precision": 0.9320209973753282,
+        "validation_passed": true
+    },
+    "error": null
+}
