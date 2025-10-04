@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Panadería artesanal en Quilicura: pan fresco todos los días, pasteles y tortas personalizadas. Pide por WhatsApp y retira en 30 minutos." />
+  <meta name="robots" content="index,follow" />
+  <title>Panadería Artesanal Quilicura | Pan Fresco Todos los Días</title>
+
+  <!-- Canonical & hreflang -->
+  <link rel="canonical" href="https://panaderia-quilicura.example.com/" />
+  <link rel="alternate" hreflang="es-cl" href="https://panaderia-quilicura.example.com/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:title" content="Panadería Artesanal Quilicura | Pan Fresco Todos los Días" />
+  <meta property="og:description" content="Pan fresco, pasteles y tortas personalizadas en Quilicura. Pide por WhatsApp." />
+  <meta property="og:site_name" content="Panadería Artesanal Quilicura" />
+  <meta property="og:image" content="https://panaderia-quilicura.example.com/og-panaderia.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Panadería Artesanal Quilicura" />
+  <meta name="twitter:description" content="Pan fresco, pasteles y tortas personalizadas. Pide por WhatsApp." />
+  <meta name="twitter:image" content="https://panaderia-quilicura.example.com/og-panaderia.jpg" />
+
+  <!-- Icons / Theme -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#FF6B35" />
+
+  <!-- Performance: fonts + external origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="//wa.me" />
+  <link rel="dns-prefetch" href="//flow.cl" />
+
+  <!-- Preload Google Fonts stylesheet -->
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  </noscript>
+
+  <style>
+    :root{
+      --color-primary:#FF6B35;
+      --color-secondary:#F7931E;
+      --color-accent:#25D366;
+      --color-text:#333333;
+      --color-muted:#666666;
+      --color-bg:#f8f9fa;
+      --color-white:#ffffff;
+      --shadow-1:0 4px 12px rgba(0,0,0,.12);
+      --shadow-2:0 8px 24px rgba(0,0,0,.15);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html:focus-within{scroll-behavior:smooth}
+    body{
+      font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;
+      line-height:1.6;color:var(--color-text);background:var(--color-bg);
+    }
+
+    /* Skip link */
+    .skip-link{
+      position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+    }
+    .skip-link:focus{
+      position:fixed;left:16px;top:16px;width:auto;height:auto;background:#000;color:#fff;
+      padding:10px 14px;border-radius:6px;z-index:1001;
+    }
+
+    /* WhatsApp Floating */
+    .whatsapp-float{
+      position:fixed;bottom:20px;right:20px;background:var(--color-accent);color:#fff;
+      width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+      font-size:32px;box-shadow:0 4px 12px rgba(37,211,102,.4);z-index:1000;text-decoration:none;
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+    .whatsapp-float:hover{transform:scale(1.08);box-shadow:0 6px 20px rgba(37,211,102,.6)}
+
+    header[role="banner"]{}
+    .hero{
+      background:linear-gradient(135deg,var(--color-primary) 0%,var(--color-secondary) 100%);
+      color:var(--color-white);padding:60px 20px 40px;text-align:center;
+    }
+    .hero h1{font-size:2.4rem;font-weight:700;margin-bottom:10px}
+    .hero p{font-size:1.05rem;margin-bottom:26px;opacity:.96}
+    .hero-cta{
+      display:inline-block;background:var(--color-white);color:var(--color-primary);
+      padding:14px 36px;border-radius:50px;text-decoration:none;font-weight:600;font-size:1.05rem;
+      transition:transform .25s ease, box-shadow .25s ease; box-shadow:var(--shadow-1);
+    }
+    .hero-cta:hover{transform:translateY(-2px);box-shadow:var(--shadow-2)}
+
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    main{display:block}
+    .section{padding:48px 20px}
+    .section-title{text-align:center;font-size:1.9rem;font-weight:700;margin-bottom:36px;color:var(--color-primary)}
+
+    .products{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-bottom:24px;
+    }
+    .product-card{
+      background:var(--color-white);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-1);
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+    .product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-2)}
+    .product-image{
+      width:100%;height:200px;background:linear-gradient(135deg,#FFE5B4 0%,#FFD700 100%);
+      display:flex;align-items:center;justify-content:center;font-size:3rem;
+    }
+    .product-content{padding:18px}
+    .product-title{font-size:1.2rem;font-weight:600;margin-bottom:8px;color:var(--color-text)}
+    .product-description{font-size:.95rem;color:var(--color-muted);margin-bottom:12px}
+    .product-price{font-size:1.35rem;font-weight:700;color:var(--color-primary);margin-bottom:14px}
+    .product-cta{
+      display:block;background:var(--color-accent);color:#fff;text-align:center;padding:12px;border-radius:8px;
+      text-decoration:none;font-weight:600;transition:filter .2s ease;
+    }
+    .product-cta:hover{filter:brightness(.96)}
+
+    .about{background:#fff;border-radius:14px;padding:34px;margin:28px 0;box-shadow:var(--shadow-1)}
+    .about h3{font-size:1.35rem;color:var(--color-primary);margin-bottom:12px}
+    .about p{color:var(--color-muted);line-height:1.8}
+
+    .testimonial{
+      background:linear-gradient(135deg,var(--color-primary) 0%,var(--color-secondary) 100%);
+      color:#fff;padding:34px;border-radius:14px;margin:28px 0;text-align:center;box-shadow:var(--shadow-1)
+    }
+    .testimonial-text{font-size:1.05rem;font-style:italic;margin-bottom:16px;line-height:1.8}
+    .testimonial-author{font-weight:600;font-size:.98rem}
+
+    .contact{background:#fff;border-radius:14px;padding:34px;text-align:center;box-shadow:var(--shadow-1)}
+    .contact-info{margin:16px 0}
+    .contact-item{display:flex;align-items:center;justify-content:center;gap:10px;margin:12px 0;font-size:1.05rem}
+    .payment-button{
+      display:inline-block;background:var(--color-primary);color:#fff;padding:14px 36px;border-radius:50px;
+      text-decoration:none;font-weight:600;font-size:1.05rem;margin-top:16px;transition:transform .2s ease, box-shadow .2s ease;
+      box-shadow:0 4px 15px rgba(255,107,53,.28);
+    }
+    .payment-button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,107,53,.38)}
+
+    footer.footer{background:#333;color:#fff;text-align:center;padding:26px 20px;margin-top:44px}
+    footer .made{margin-top:8px;font-size:.9rem;opacity:.9}
+
+    @media (max-width: 768px){
+      .hero h1{font-size:2rem}
+      .section-title{font-size:1.5rem}
+      .products{grid-template-columns:1fr}
+      .whatsapp-float{width:55px;height:55px;font-size:28px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+    }
+  </style>
+
+  <!-- Structured Data: Bakery + ItemList of products -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Panadería Artesanal Quilicura",
+    "url": "https://panaderia-quilicura.example.com/",
+    "image": "https://panaderia-quilicura.example.com/og-panaderia.jpg",
+    "priceRange": "$",
+    "telephone": "+56912345678",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenida Principal 123",
+      "addressLocality": "Quilicura",
+      "addressRegion": "RM",
+      "postalCode": "0000000",
+      "addressCountry": "CL"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "07:00",
+      "closes": "20:00"
+    },{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "08:00",
+      "closes": "14:00"
+    }],
+    "servesCuisine": "Bakery",
+    "areaServed": "Quilicura",
+    "hasMenu": "https://panaderia-quilicura.example.com/#productos"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Productos Panadería",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Product",
+        "name": "Pan Amasado",
+        "description": "Recién horneado, suave y esponjoso.",
+        "offers": {
+          "@type": "Offer",
+          "price": "500",
+          "priceCurrency": "CLP",
+          "availability": "https://schema.org/InStock",
+          "url": "https://wa.me/56912345678?text=Quiero%20pedir%20Pan%20Amasado"
+        }
+      }
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Product",
+        "name": "Pasteles",
+        "description": "Deliciosos pasteles para toda ocasión.",
+        "offers": {
+          "@type": "Offer",
+          "price": "8000",
+          "priceCurrency": "CLP",
+          "availability": "https://schema.org/InStock",
+          "url": "https://wa.me/56912345678?text=Quiero%20pedir%20Pasteles"
+        }
+      }
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Product",
+        "name": "Tortas Personalizadas",
+        "description": "Tortas únicas para tus celebraciones.",
+        "offers": {
+          "@type": "Offer",
+          "price": "15000",
+          "priceCurrency": "CLP",
+          "availability": "https://schema.org/InStock",
+          "url": "https://wa.me/56912345678?text=Quiero%20cotizar%20una%20Torta%20Personalizada"
+        }
+      }
+    }]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/56912345678?text=Hola!%20Quiero%20hacer%20un%20pedido"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contactar por WhatsApp">
+    <span aria-hidden="true">📱</span>
+  </a>
+
+  <header role="banner">
+    <section class="hero" id="inicio">
+      <div class="container">
+        <h1>🥖 Panadería Artesanal</h1>
+        <p>Pan fresco todos los días, hecho con amor en Quilicura</p>
+        <a href="https://wa.me/56912345678?text=Hola!%20Quiero%20hacer%20un%20pedido"
+           class="hero-cta"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Pedir por WhatsApp">
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </section>
+  </header>
+
+  <main id="contenido" role="main">
+    <!-- Products Section -->
+    <section class="section" id="productos" aria-labelledby="productos-title">
+      <div class="container">
+        <h2 class="section-title" id="productos-title">Nuestros Productos</h2>
+        <div class="products">
+          <article class="product-card" aria-labelledby="prod1-title">
+            <div class="product-image" role="img" aria-label="Pan amasado">
+              <span aria-hidden="true">🥖</span>
+            </div>
+            <div class="product-content">
+              <h3 class="product-title" id="prod1-title">Pan Amasado</h3>
+              <p class="product-description">Recién horneado, suave y esponjoso. Ideal para el desayuno.</p>
+              <p class="product-price">Desde $500</p>
+              <a class="product-cta"
+                 href="https://wa.me/56912345678?text=Quiero%20pedir%20Pan%20Amasado"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Pedir Pan Amasado por WhatsApp">
+                Pedir por WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card" aria-labelledby="prod2-title">
+            <div class="product-image" role="img" aria-label="Pasteles">
+              <span aria-hidden="true">🎂</span>
+            </div>
+            <div class="product-content">
+              <h3 class="product-title" id="prod2-title">Pasteles</h3>
+              <p class="product-description">Deliciosos pasteles para toda ocasión. Variedad de sabores.</p>
+              <p class="product-price">Desde $8.000</p>
+              <a class="product-cta"
+                 href="https://wa.me/56912345678?text=Quiero%20pedir%20Pasteles"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Pedir Pasteles por WhatsApp">
+                Pedir por WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card" aria-labelledby="prod3-title">
+            <div class="product-image" role="img" aria-label="Torta personalizada">
+              <span aria-hidden="true">🍰</span>
+            </div>
+            <div class="product-content">
+              <h3 class="product-title" id="prod3-title">Tortas Personalizadas</h3>
+              <p class="product-description">Tortas únicas para tus celebraciones especiales.</p>
+              <p class="product-price">Desde $15.000</p>
+              <a class="product-cta"
+                 href="https://wa.me/56912345678?text=Quiero%20cotizar%20una%20Torta%20Personalizada"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Cotizar Torta Personalizada por WhatsApp">
+                Cotizar por WhatsApp
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="sobre-nosotros" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about">
+          <h3 id="about-title">Sobre Nosotros</h3>
+          <p>Somos una panadería familiar con más de 10 años de experiencia en Quilicura. Nos especializamos en pan artesanal y pasteles hechos con ingredientes de primera calidad. Cada producto es elaborado con dedicación y amor para llevar el mejor sabor a tu mesa.</p>
+          <address>
+            <p><strong>📍 Dirección:</strong> Avenida Principal 123, Quilicura</p>
+            <p><strong>⏰ Horario:</strong> Lunes a Sábado: 7:00 - 20:00 | Domingo: 8:00 - 14:00</p>
+          </address>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="section" id="testimonios" aria-labelledby="testi-title">
+      <div class="container">
+        <div class="testimonial">
+          <p class="testimonial-text">"¡El mejor pan de Quilicura! Siempre fresco y delicioso. El pan amasado es mi favorito para el desayuno. Súper recomendado."</p>
+          <p class="testimonial-author" id="testi-title">— María González, Cliente frecuente</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Payment Section -->
+    <section class="section" id="contacto" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact">
+          <h2 class="section-title" id="contact-title">Contacto y Pago</h2>
+          <div class="contact-info" aria-label="Información de contacto">
+            <div class="contact-item">
+              <span aria-hidden="true">📱</span>
+              <a href="tel:+56912345678" aria-label="Llamar al +56 9 1234 5678">+56 9 1234 5678</a>
+            </div>
+            <div class="contact-item">
+              <span aria-hidden="true">📍</span>
+              <a href="https://maps.google.com/?q=Avenida%20Principal%20123%2C%20Quilicura"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Abrir dirección en Google Maps">
+                Avenida Principal 123, Quilicura
+              </a>
+            </div>
+            <div class="contact-item">
+              <span aria-hidden="true">⏰</span>
+              <span>Lun-Sáb: 7:00-20:00</span>
+            </div>
+          </div>
+          <a href="https://flow.cl/demo-pago"
+             class="payment-button"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Ir a pago online en Flow">
+            💳 Pagar Online
+          </a>
+          <p style="margin-top: 12px; color: var(--color-muted); font-size: .95rem;">
+            Pide por WhatsApp y retira en 30 minutos
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <p>&copy; 2025 Panadería Artesanal Quilicura. Todos los derechos reservados.</p>
+    <p class="made">Hecho con ❤️ en Quilicura</p>
+  </footer>
+</body>
+</html>
